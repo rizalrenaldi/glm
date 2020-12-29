@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-black;
+}
+.centered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-500 {
+    top: -500px;
+}
+
+.open {
+    max-height: 300px;
+}
