@@ -101,9 +101,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
     // '@nuxtjs/google-analytics',
-    '@aceforth/nuxt-optimized-images',
-    "@nuxtjs/svg"
+    // '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -126,8 +126,5 @@ export default {
   },
   'google-adsense': {
     id: ''
-  },
-  optimizedImages: {
-    optimizeImages: true
   }
 }
