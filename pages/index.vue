@@ -1,7 +1,7 @@
 <template>
 <section class="relative m-4 min-h-screen text-mute-100">
   <img class="w-full fixed inset-0 -z-0" src="~/assets/images/bg-texture.png" alt="">
-  <img class="w-1/3 absolute -left-40 -top-40 z-0 opacity-50" src="/bluri.svg" alt="blur" />
+  <img class="w-1/2 absolute -inset-1/4 z-0 opacity-50" src="~assets/images/bluri.svg" alt="blur" />
 
   <div class="inner border border-mute-700 border-opacity-70 flex flex-col md:flex-row flex-wrap relative z-10">
       <div class="w-full md:w-1/2 border-r border-b border-mute-700 border-opacity-70 flex flex-col justify-between">

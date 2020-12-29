@@ -103,6 +103,7 @@ export default {
     '@nuxtjs/tailwindcss',
     // '@nuxtjs/google-analytics',
     '@aceforth/nuxt-optimized-images',
+    "@nuxtjs/svg"
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
