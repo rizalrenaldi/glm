@@ -5,12 +5,12 @@
 
   <div class="inner border border-mute-700 border-opacity-70 flex flex-col md:flex-row flex-wrap relative z-10">
       <div class="w-full md:w-1/2 md:border-r border-b border-mute-700 border-opacity-70 flex flex-col justify-between">
-          <h1 class="p-8 md:p-4 lg:p-8 text-7xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
+          <h1 class="p-8 md:p-4 lg:p-8 text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
             <span class="relative glm-title">God-like Musicians</span>
           </h1>
           <div class="h-16 w-full border-t border-mute-700 border-opacity-70 flex items-center">
-              <div class="py-5 h-full text-sm flex-1 px-8 md:px-4 lg:px-8 uppercase md:tracking-wider lg:tracking-wider text-mute-400">A List by <a href="https://rizalrenaldi.com">Rizal Renaldi</a></div>
-              <div class="flex items-center justify-around border-l border-mute-700 border-opacity-70 h-full px-8 md:px-4 lg:px-8 text-mute-600">
+              <div class="py-5 h-full text-xs md:text-sm flex-1 px-8 md:px-4 lg:px-8 uppercase md:tracking-wider lg:tracking-wider text-mute-400">A List by <a href="https://rizalrenaldi.com">Rizal Renaldi</a></div>
+              <div class="w-1/3 flex items-center justify-around border-l border-mute-700 border-opacity-70 h-full px-8 md:px-4 lg:px-8 text-mute-600">
                   <p class="uppercase text-sm hidden lg:block mr-4">Share</p>
                   <div>
                       <svg class="w-6 md:w-4 lg:w-8 mx-3" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,15 +58,15 @@
       </div>
 
       <div v-for="musician of musicians" :key="musician.slug" >
-       <div class="group w-full px-4 py-6 md:py-12 border-b border-mute-700 border-opacity-70 cursor-pointer">
-        <div :id="musician.id" class="flex flex-col md:flex-row items-baseline justify-between p-4 cursor-pointer" @click="selected !== musician.id ? selected = musician.id : selected = null">
-            <p class="font-handwrite text-mute-400 text-4xl md:text-7xl transition duration-200 group-hover:text-opacity-60">{{musician.name}} &nbsp; <br class="md:hidden"><span class="whitespace-nowrap font-sans font-normal opacity-60 text-sm md:text-lg tracking-tighter text-mute-400">{{musician.band}}</span></p>
+       <div class="group w-full px-4 py-4 md:py-12 border-b border-mute-700 border-opacity-70 cursor-pointer">
+        <div :id="musician.id" class="flex items-baseline justify-between md:p-4 cursor-pointer" @click="selected !== musician.id ? selected = musician.id : selected = null">
+            <p class="font-handwrite text-mute-400 md:mb-0 text-5xl md:text-7xl transition duration-200 group-hover:text-opacity-60">{{musician.name}} &nbsp; <br class="md:hidden"><span class="hidden md:inline-block whitespace-nowrap font-sans font-normal opacity-60 text-sm md:text-lg tracking-tighter text-mute-400">{{musician.band}}</span></p>
             <p class="text-sm md:text-lg tracking-tighter text-mute-400 hidden md:block">{{musician.surname}}</p>
         </div>
 
         <div class="details overflow-hidden max-h-0 duration-500" :class="selected == musician.id ? 'open-height' : ''">
-            <div class="leading-loose p-4">
-                <p class="text-mute-600 uppercase font-semibold mb-4 tracking-wider text-sm">{{musician.category}}</p>
+            <div class="leading-loose pt-8 md:pt-0 md:p-4">
+                <p class="text-mute-600 uppercase font-semibold mb-4 md:tracking-wider text-xs md:text-sm">{{musician.category}}</p>
             <div class="flex flex-col md:flex-row">
                 <div class="w-full md:w-1/2">
                     <p>{{musician.description}}
@@ -136,9 +136,22 @@ export default {
     border-radius: 50%;
     @apply bg-blue-600;
     position:absolute;
+    bottom: 32px;
+    right: -24px;
+  }
+
+@screen md {
+  .glm-title::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    @apply bg-blue-600;
+    position:absolute;
     bottom: 64px;
     right: -24px;
   }
+}
 
   .musician-img img {
     @apply transition duration-200;
