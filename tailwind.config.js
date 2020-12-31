@@ -17,6 +17,9 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'sans': 'Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    },
     extend: {
       colors: {
         white: "#ffffff",

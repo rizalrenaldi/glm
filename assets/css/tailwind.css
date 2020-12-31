@@ -25,10 +25,31 @@ body {
     top: -500px;
 }
 
-.open {
-    max-height: 300px;
+.open-height {
+    max-height: fit-content;
+}
+
+@screen md {
+    .open-height {
+        max-height: 800px;
+    }
+
 }
 
 .-z-1 {
     z-index: -1;
+  }
+
+  .star {
+    transform-origin: center center;
+    animation: rotator 8s infinite linear;
+  }
+
+  @keyframes rotator {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
   }

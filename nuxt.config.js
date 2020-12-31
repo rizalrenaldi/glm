@@ -86,6 +86,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~layouts/papamano.css',
     'aos/dist/aos.css'
   ],
 
@@ -112,6 +113,8 @@ export default {
     '@nuxt/content',
     // '@nuxtjs/google-adsense',
     'nuxt-lazy-load',
+    'nuxt-webfontloader',
+    'vue-scrollto/nuxt',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
@@ -126,5 +129,10 @@ export default {
   },
   'google-adsense': {
     id: ''
-  }
+  },
+  webfontloader: {
+    google: {
+      families: ['Inter:400,600,700,800'] //Loads Lato font with weights 400 and 700
+    }
+  },
 }
