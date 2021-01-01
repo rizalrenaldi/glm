@@ -25,6 +25,7 @@
               </div>
           </div>
       </div>
+
       <div class="w-full md:w-1/2 hidden md:flex flex-col justify-between">
           <div class="flex-1 flex items-center">
               <p class="text-base lg:text-2xl p-8 lg:p-16 text-mute-400 relative leading-relaxed">
@@ -47,7 +48,7 @@
               </p>
           </div>
           <div class="h-16 w-full border-t border-b border-mute-700 border-opacity-70 flex items-center">
-              <div class="py-5 h-full text-xs md:text-sm w-full flex-1 px-8 lg:px-16 text-mute-600 uppercase tracking-wider"><span class="font-bold">{{musicians.length}} Musicians</span> in no particular order</div>
+              <div class="py-5 h-full text-xs md:text-sm w-full flex-1 px-8 lg:px-16 text-mute-600 uppercase tracking-wider"><span class="font-bold">11 Musicians</span> in no particular order</div>
                   <!-- <svg class="w-2/3 absolute left-8 top-2" viewBox="0 0 344 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 4.80193C15.1435 4.60493 29.2213 3.57437 43.3293 3.04178C64.3956 2.24648 85.6546 2.40812 106.757 2.40812C126.46 2.40812 146.2 2.82512 165.9 2.51373C172.983 2.40177 179.995 1.90869 187.064 1.70406C194.352 1.49309 201.137 1.95048 206.317 1.95048C244.366 1.95048 282.578 2.87656 320.579 1.73926C328.181 1.51176 335.772 1 343.392 1C345.584 1 341.171 1 340.821 1C337.524 1 334.228 1 330.931 1" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M33.6367 5.67565C77.0581 6.12148 120.414 6.32968 163.855 6.3093C185.514 6.29914 207.163 6.23917 228.8 5.67565C238.567 5.42126 248.324 5.04199 258.107 5.04199C262.463 5.04199 266.75 5.35882 271.129 5.35882C279.603 5.35882 288.042 5.04199 296.513 5.04199" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,75 +58,18 @@
           </div>
       </div>
 
-      <div v-for="musician of musicians" :key="musician.slug" >
-       <div class="group w-full px-4 py-4 md:py-12 border-b border-mute-700 border-opacity-70 cursor-pointer">
-        <div :id="musician.id" class="flex items-baseline justify-between md:p-4 cursor-pointer" @click="selected !== musician.id ? selected = musician.id : selected = null">
-            <p class="font-handwrite text-mute-400 md:mb-0 text-5xl md:text-7xl transition duration-200 group-hover:text-opacity-60">{{musician.name}} &nbsp; <br class="md:hidden"><span class="hidden md:inline-block whitespace-nowrap font-sans font-normal opacity-60 text-sm md:text-lg tracking-tighter text-mute-400">{{musician.band}}</span></p>
-            <p class="text-sm md:text-lg tracking-tighter text-mute-400 hidden md:block">{{musician.surname}}</p>
-        </div>
+      <!-- <ArtistList /> -->
+      <section class="relative m-4 min-h-screen text-mute-100">
+      <Test/>
 
-        <div class="details overflow-hidden max-h-0 duration-500" :class="selected == musician.id ? 'open-height' : ''">
-            <div class="leading-loose pt-8 md:pt-0 md:p-4">
-                <p class="text-mute-600 uppercase font-semibold mb-4 md:tracking-wider text-xs md:text-sm">{{musician.category}}</p>
-            <div class="flex flex-col md:flex-row">
-                <div class="w-full md:w-1/2">
-                    <p>{{musician.description}}
-                        <a class="text-blue-600 text-xs" :href="musician.link" target="_blank">
-                            <svg class="inline-block mx-1 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.25 2.75H7.74915C4.98772 2.75 2.74915 4.98858 2.74915 7.75V16.2499C2.74915 19.0114 4.98773 21.2499 7.74915 21.2499H16.2508C19.0122 21.2499 21.2508 19.0112 21.2508 16.2498C21.2508 15.3354 21.2508 14.4505 21.2508 13.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.75 2.75H21.25V9.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21.25 2.75L12.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-
-                            More on Wikipedia</a>
-                    </p>
-                    <p class="mt-8 p-6 bg-mute-800 bg-opacity-50 text-mute-400 rounded-lg">{{musician.notes}}</p>
-                    <div class="song w-full bg-mute-800" style="height:80px;">
-                        <!-- <div class="isLoading"></div> -->
-                        <iframe class="my-16" :src="musician.spotify" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>
-
-                    </div>
-                 <div class="w-full md:w-1/2 md:mx-16">
-                    <div class="bg-mute-800">
-                        <div class="w-full overflow-hidden transform -rotate-3 musician-img">
-                            <img class="w-full h-full object-cover object-center" :src="require(`~/assets/images/${musician.foto}`)" :alt="musician.name">
-                        </div>
-
-                    </div>
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    </div>
+      </section>
 
   </div>
   </section>
 </template>
 
 <script>
-export default { 
-      async asyncData({ $content, params }) {
-        const musicians = await $content('musicians', params.slug).sortBy('id').fetch() 
 
-        return {
-          musicians
-        }
-      },
-      data () {
-        return {
-          selected: null,
-          iframeLoaded: false
-        }
-      },
-      methods: {
-          load: function(e){
-                console.log(e)
-                this.iframeLoaded = true;
-            }
-      }
-    } 
 </script>
 
 <style>
@@ -162,7 +106,7 @@ export default {
     filter: grayscale(0%);
   }
 
-iframe.isLoading {
+.isLoading {
     width: 100%;
     height: 80px;
     background-image: linear-gradient(90deg, rgba(36, 36, 36, 1) 0px, rgba(74, 74, 74, 0.4) 40px, rgba(36, 36, 36, 1) 80px);
