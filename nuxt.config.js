@@ -25,12 +25,12 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Free Placeholder Logo For Your Design Mock-up. SVG logo. Download or copy & paste.'
+        content: 'God-like Musician | Rizal Renaldi'
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: 'Free Placeholder Logo For Your Design Mock-up. SVG logo. Download or copy & paste.'
+        content: 'Opinionated & subjective list of genius musicians across era and genre'
       },
       {
         hid: 'twitter:image',
@@ -50,23 +50,23 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Free Placeholder Logo For Your Design Mock-up. SVG logo. Download or copy & paste.'
+        content: 'God-like Musician | Rizal Renaldi'
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Free Placeholder Logo For Your Design Mock-up. SVG logo. Download or copy & paste.'
+          'Opinionated & subjective list of genius musicians across era and genre'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/logopisum.png'
+        content: '/glm.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: '/logopisum.png'
+        content: '/glm.png'
       },
       {
         hid: 'og:image:alt',
